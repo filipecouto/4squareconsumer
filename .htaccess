@@ -1,0 +1,21 @@
+# Activate rewrite engine
+RewriteBase /
+Options +FollowSymlinks
+RewriteEngine on
+
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+
+# Error pages
+#ErrorDocument 400 /error/error.php?code=400
+#ErrorDocument 401 /error/error.php?code=401
+#ErrorDocument 403 /error/error.php?code=403
+#ErrorDocument 404 /error/error.php?code=404
+#ErrorDocument 405 /error/error.php?code=405
+#ErrorDocument 500 /error/error.php?code=500
+#ErrorDocument 501 /error/error.php?code=501
+#ErrorDocument 502 /error/error.php?code=502
+#ErrorDocument 503 /error/error.php?code=503
+#ErrorDocument 504 /error/error.php?code=504
+#ErrorDocument 505 /error/error.php?code=505
+
+RewriteRule ^(((?!(css|js|img)\/).)*)$ index.php?url=$1 [QSA,L]
