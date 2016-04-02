@@ -1,5 +1,5 @@
-Para testar a API que desenvolvi é preciso primeiro correr o script da base de dados para a base de dados existir.
-Depois, existem os seguintes endpoints e respectivos parâmetros a passar:
+To test the API I developed first you need to run the database script located on /sql/database.sql
+Then, you have the following endpoints:
 /places/search GET
 	- where || latitude && longitude
 	- query
@@ -18,6 +18,6 @@ Depois, existem os seguintes endpoints e respectivos parâmetros a passar:
 /users/register POST
 	- email
 	- password
-/comment/hide
+/comment/hide POST
 	- session_id
 	- comment_id
